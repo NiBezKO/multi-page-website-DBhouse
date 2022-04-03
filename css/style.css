@@ -1,0 +1,173 @@
+@import url(../css/reset.css);
+.header {
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  z-index: 1000;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.site__logo {
+  display: inline-block;
+  font-size: 66px;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-weight: 700;
+  color: white;
+  padding-left: 50px;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  padding-top: 15px;
+}
+
+.nav__link {
+  margin: 0 40px 0 40px;
+  text-decoration: none;
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+}
+
+/* Intro 
+======================================*/
+.intro {
+  height: 100vh;
+  background: url(../img/intro-img.jpg) center no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  color: white;
+}
+
+.intro__inner {
+  padding: 150px 0 0 150px;
+  text-align: left;
+}
+
+.intro__title {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 52px;
+  padding-bottom: 25px;
+}
+
+.intro__subtitle {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 50px;
+}
+
+.intro__img {
+  padding: 165px 35px 0;
+  text-align: right;
+}
+
+/* BUTTON GO TO PAGE 
+====================================*/
+.button__page {
+  display: inline-block;
+  padding: 25px 0;
+  width: 180px;
+  height: 80px;
+  background-color: #09A7CA;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  vertical-align: top;
+  cursor: pointer;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+.button__page:hover {
+  background-color: #023957;
+}
+
+/*====================================*/
+/* About Company
+========================================*/
+.wrapper {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.ourcompany {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 113px;
+}
+
+.ourcompany__company-img {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -ms-grid-columns: 310px 310px;
+      grid-template-columns: 310px 310px;
+  -ms-grid-rows: 241px;
+      grid-template-rows: 241px;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+  grid-column-end: 2;
+}
+
+.ourcompany__description {
+  padding-left: 130px;
+  text-align: left;
+}
+
+.ourcompany__title {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 24px;
+  color: #056088;
+  padding-bottom: 16px;
+}
+
+.ourcompany__company-description {
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 16px;
+  padding-bottom: 16px;
+  line-height: 29px;
+}
+
+.statistic__title {
+  font-family: 'Poppins';
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 16px;
+}
+
+.statistic__company {
+  display: -ms-inline-grid;
+  display: inline-grid;
+  -ms-grid-columns: (130px)[3];
+      grid-template-columns: repeat(3, 130px);
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  font-weight: 700;
+  color: #056088;
+  font-size: 20px;
+  padding-bottom: 25px;
+}
+/*# sourceMappingURL=style.css.map */
