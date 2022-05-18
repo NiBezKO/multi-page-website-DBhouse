@@ -6,8 +6,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Roboto:wght@700&display=swap" 
     rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/chief-slider.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Db- Contact</title>
+    <title>Process details </title>
 </head>
 <body>
 <!--SPRITE-->
@@ -67,41 +68,76 @@
 <div class="intro intro--page">
     <div class="intro__inner intro__inner--page">
         <h1 class="intro__title intro__title--page">
-            Need some consultation or want to collaborarion with us? Let’s connect!
+            Process details : Build villa two floors
         </h1>
     </div>
 </div>
 <main>
     <section>
-        <div class="wrapper">
-                <div class="contact__top">
-                    <div class="contact__top_img">
-                        <img src="img/contactIMG.png" class="contact__img" alt="">
+            <div class="wrapper">
+                <div class="process__top">
+                    <div class="process__inner">
+                        <h3 class="inner__item_name">Villa De Borusdz</h3>
+                        <p class="rocess__description">is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a 
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+                            but also the leap into electronic typesetting, 
+                            remaining essentially unchanged.
+                        </p>
+                        <div class="inner__item_price">
+                            <p>Budget : $90.000</p>
+                            <p>Time : 3 months</p>
+                        </div>
                     </div>
-                    <div class="contact__form">
-                        <h2 class="section__title">Let’s talk about anything you need</h2>
-                        <form action="post" class="contact__form_page">
-                            <input type="text" name="company" class="input__company" placeholder="Your name/company name" required>
-                            <input type="email" class="input__email" name="mail" id="" placeholder="Phone/E-mail" required>
-                            <textarea name="" class="textarea__form" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                            <button href="#" class="submit__button_main submit__button_main--contact">Submit</button>
-                        </form>
-                    </div>
-                </div>
+                    <img class="process__img" src="img/processTopImg.jpg" alt="">
+               </div>
             </div>
     </section>
+    <section >
+        <div class="wrapper">
+            <div class="process__central">
+                <iframe  src="https://www.youtube.com/embed/3CeYsZdvR64" class="process__video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
     <section>
-        <div class="down__block_contact">
-            <div class="wrapper">
-                <div class="down__block_inner--contact">
-                    <h2 class="section__title">Or contact us via e-mails or even mobile call or Whatsapp messages</h2>
-                    <div class="social__contacts">
-                        <a href="Gallery.html" class="button__page button__page--conact">E-mails</a>
-                        <a href="Gallery.html" class="button__page button__page--conact">Whatsapp</a>
-                        <a href="Gallery.html" class="button__page button__page--conact">Message</a>
+        <div class="wrapper">
+            <div class="process__gallery">
+                <h3 class="process__gallery_name">Gallery</h3>
+                <div class="gallery__slider">
+                    <div class="slider" id="slider">
+                        <div class="slider__wrapper">
+                            <div class="slider__items">
+                                <div class="slider__item">
+                                    <img src="img/sliderProcessIMG1.jpg" alt="">
+                                </div>
+                                <div class="slider__item">
+                                    <img src="img/sliderProcessIMG1.jpg" alt="">
+                                </div>
+                                <div class="slider__item">
+                                    <img src="img/sliderProcessIMG1.jpg" alt="">
+                                </div>
+                                <div class="slider__item">
+                                    <img src="img/sliderProcessIMG1.jpg" alt="">
+                                </div>
+                                <div class="slider__item">
+                                    <img src="img/sliderProcessIMG1.jpg" alt="">
+                                </div>
+                                <div class="slider__item">
+                                    <img src="img/sliderProcessIMG1.jpg" alt="">
+                                </div>
+                                <div class="slider__item">
+                                    <img src="img/sliderProcessIMG1.jpg" alt="">
+                                </div>
+                                <div class="slider__item">
+                                    <img src="img/sliderProcessIMG1.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="slider__control" data-slide="prev"></a>
+                        <a href="#" class="slider__control" data-slide="next"></a>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
@@ -164,5 +200,6 @@
 </footer><!--/Footer-->
 
 <script src="js/script.js"></script>
+<script defer src="js/chief-slider.js"></script>
 </body>
 </html>

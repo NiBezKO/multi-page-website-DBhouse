@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Roboto:wght@700&display=swap" 
     rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="css/style.css">
     <title>Db- Home Page</title>
 </head>
@@ -46,18 +47,21 @@
 <header class="header">
     <div class="header__inner">
         <p class="site__logo">DB-</p>
-    <nav class="nav">
-        <ul class="nav__list">
-            <li><a href="Index.html" class="nav__link">Home</a></li>
-            <li><a href="About.html" class="nav__link">About</a></li>
-            <li><a href="Services.html" class="nav__link">Services</a></li>
-            <li><a href="Gallery.html" class="nav__link">Gallery</a></li>
-            <li><a href="Contact.html" class="nav__link">Contact</a></li>
-            <li><a href="Story.html" class="nav__link">Story</a></li>    
-            <li><a href="Careers.html" class="nav__link">Careers</a></li>
-            <li><a href="News.html" class="nav__link">News</a></li>
-        </ul>
-    </nav>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li><a href="Index.html" class="nav__link">Home</a></li>
+                <li><a href="About.html" class="nav__link">About</a></li>
+                <li><a href="Services.html" class="nav__link">Services</a></li>
+                <li><a href="Gallery.html" class="nav__link">Gallery</a></li>
+                <li><a href="Contact.html" class="nav__link">Contact</a></li>
+                <li><a href="Story.html" class="nav__link">Story</a></li>    
+                <li><a href="Career.html" class="nav__link">Careers</a></li>
+                <li><a href="News.html" class="nav__link">News</a></li>
+            </ul>
+        </nav>
+        <div class="burger">
+            <span class="burger__content"></span>
+        </div>
 </div>
 </header>
 <!--Intro-->
@@ -72,19 +76,23 @@
         <a href="contacts.html" class="button__page">Contact Us</a>
     </div>
     <div class="intro__img">
-        <img src="img/Rectangle 3.png" alt="">
-        <img src="img/Rectangle 4.png" alt="">
+        <a href="Gallery.html"><img src="img/Rectangle 3.png" alt=""></a>
+        <a href="Gallery.html"><img src="img/Rectangle 4.png" alt=""></a>
     </div>
 </div>
 <main>
     <!--Our Company block-->
     <div class="wrapper">
         <div class="ourcompany">
-            <div class="ourcompany__company-img">
-              <img src="img/Rectangle 5.jpg" alt="" class="img__left-block">
-              <img src="img/Rectangle 6.jpg" alt="" class="img__left-block ">
-              <img src="img/Rectangle 8.jpg" alt="" class="img__left-block">
-              <img src="img/Rectangle 7.jpg" alt="" class="img__left-block">
+            <div class="ourcompany__company_img">
+                <div class="left__block_img">
+                    <img src="img/Rectangle 5.jpg" alt="" class="img__left-block">
+                    <img src="img/Rectangle 6.jpg" alt="" class="img__left-block ">
+                </div>
+                <div class="right__block_img">
+                    <img src="img/Rectangle 8.jpg" alt="" class="img__left-block">
+                    <img src="img/Rectangle 7.jpg" alt="" class="img__left-block">
+                </div>
             </div>
             <div class="ourcompany__description">
               <h2 class="section__title">Our company</h2>
@@ -353,5 +361,7 @@
            <p class="copyright">2021 - Copyright ZHB Studio</p>
     </div>
 </footer><!--/Footer-->
+
+<script src="js/script.js"></script>
 </body>
 </html>
