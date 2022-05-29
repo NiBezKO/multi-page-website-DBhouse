@@ -825,6 +825,20 @@ $eclipse3: #023957 ;
     display: flex;
     //flex-wrap: wrap;
     width: 100%;
+    animation-duration: 6s;
+    animation-name: slidein;
+
+    @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 100%;
+        }
+      
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
 
     .l__block {
         position: relative;
@@ -1377,6 +1391,18 @@ $eclipse3: #023957 ;
     }
 }
 
+.animated__block {
+    opacity: 0;
+	transform: translateY(50px);
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.animated__block._active {
+    opacity: 1;
+	transform: translateY(0);
+	transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
 @media (max-width: 1000px ) {
 
     .services__center {
@@ -1425,4 +1451,90 @@ $eclipse3: #023957 ;
             display: none;
         }
     }
+}
+
+/* Story page 
+============================================*/ 
+
+.reviews__slider {
+    margin: 100px 0;
+
+
+    .swiper {
+        max-width: 1236px;
+        height: 3373px;
+
+        &-slide {
+
+            .slider__item_inner {
+                color: black;
+                text-align: left;
+                font-size: 16px;
+                font-weight: 400;
+                font-style: italic;
+                padding: 12px 12px 12px 12px;
+                cursor: pointer;
+                font-family: 'Poppins';
+ 
+                &:hover {
+                    color: $white;
+                    background: url("../img/sliderClientBG.png");
+                    transform: all 2s ease;
+                }
+
+
+                .slider__text {
+                    margin: 32px 0 16px 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-style: italic;
+                }
+            }
+        }
+      }
+
+    /*.slider {
+        max-width: 1236px;
+
+        .slider__wrapper {
+            overflow: hidden;
+
+            .slider__items {
+            
+                .slider__item {
+                    flex: 0 0 33.3333333333%;
+                    max-width: 416px;
+                    height: 373px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: rgba(255,255,255, 0.8);
+
+                    &_inner {
+                        color: black;
+                        text-align: left;
+                        font-size: 16px;
+                        font-weight: 400;
+                        font-style: italic;
+                        padding: 12px 12px 12px 12px;
+                        cursor: pointer;
+                        font-family: 'Poppins';
+
+                        &:hover {
+                            color: $white;
+                            background: url("../img/sliderClientBG.png");
+                            transform: all 2s ease;
+                        }
+
+                        .slider__text {
+                            margin: 32px 0 16px 0;
+                            font-size: 16px;
+                            font-weight: 400;
+                            font-style: italic;
+                        }
+                    }
+                }
+            }
+        }  
+    } */
 }

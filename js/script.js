@@ -51,8 +51,6 @@ function showListProcess () {
     }
 }
     
-
-
 showListProcess ();
 
 /* show list gallery */
@@ -92,41 +90,112 @@ function showNews () {
         galleryList[i].style.display = "none";
     }
     
-    const showNews = document.getElementById ("openbtn");
-    if (showNews) {
+    const openNews = document.getElementById ("openbtn");
+    if (openNews) {
         let countD = 6;
         buttonShow.addEventListener("click", function() {
             let galleryList = document.querySelectorAll(".gallery__inner_item");
             countD += 6;
             if (countD <= galleryList.length){
-                for(let i=0; i<countD ;i++){
+                for(let i=0; i < countD ;i++){
                     galleryList[i].style.display = "block";
                 }
             }
-        console.log(buttonShow);
+        
         })
     }  
 }
 
-showNews ();
+showNews (); 
+
+
+/* animated block */
+
+
+document.addEventListener ('DOMContentLoaded', function () {
+    let animBlock = document.querySelectorAll (".animated__block");
+    
+    
+    //console.log(animBlock);
+    if ( animBlock) {
+        function animScroll () {
+        let windowCenter = (window.innerHeight  + window.scrollY) - header.offsetHeight;
+        console.log()
+        let siteHeight = window.outerHeight;
+
+        for ( let i = 0; i < animBlock.length; i++ ) {
+           let animItem = animBlock[i];
+           //console.log(animBlock[i]);
+           
+           let scrollOffSet = animItem.offsetTop + (animItem.offsetHeight /2);
+           if (  windowCenter > scrollOffSet) {
+            animItem.classList.add ("_active");
+           } else {
+            animItem.classList.remove ("_active");
+           }
+           
+        };
+        
+    };
+        
+    window.addEventListener ("scroll" , function () {
+        let srollTop = window.scrollY;
+        animScroll ();    
+    }) 
+    
+    };
+});
+    
+
+
+
+
+ 
 /* corousel */
 
-function corousel () {
+/*const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  }); */
+
+
+
+/*function corousel () {
     const corousel = document.getElementById ("slider")
     if (!corousel) {
         document.addEventListener.remove
     } else {
-        document.addEventListener('DOMContentLoaded', function () {
-
-            const slider = new ChiefSlider('.slider', {
-                loop: false
-            })
-        }) 
+        document.addEventListener('DOMContentLoaded', function() {
+            let elms = document.querySelectorAll('.slider');
+            for (let i = 0, len = elms.length; i < len; i++) {
+              new ChiefSlider(elms[i]);
+            }
+          });
     }
     
 }
 
-corousel ();
+corousel (); */
+
+
+
 
 //let openButton = document.querySelector (".open__list")
 //let careerShow = document.querySelector(".career")
