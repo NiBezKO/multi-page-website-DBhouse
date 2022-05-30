@@ -8,7 +8,7 @@ window.addEventListener("scroll", function() {
     } else {
         header.classList.remove('eclipse');
     }
-    
+    console.log(scrollPos);
 });
 
 /* burger menu */
@@ -114,13 +114,12 @@ showNews ();
 
 document.addEventListener ('DOMContentLoaded', function () {
     let animBlock = document.querySelectorAll (".animated__block");
-    
+    let headerheight = document.querySelector (".header");
     
     //console.log(animBlock);
     if ( animBlock) {
         function animScroll () {
-        let windowCenter = (window.innerHeight  + window.scrollY) - header.offsetHeight;
-        console.log()
+        let windowCenter = (window.innerHeight  + window.scrollY) - headerheight.offsetHeight;
         let siteHeight = window.outerHeight;
 
         for ( let i = 0; i < animBlock.length; i++ ) {

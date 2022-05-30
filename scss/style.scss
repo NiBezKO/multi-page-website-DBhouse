@@ -140,6 +140,14 @@ $eclipse3: #023957 ;
     
 }
 
+
+
+@media (max-width: 700px) {
+    .header {
+        background-color: $eclipse2;
+    }
+}
+
 /* Intro 
 ======================================*/
 
@@ -173,12 +181,31 @@ $eclipse3: #023957 ;
     &__img {
         margin: 165px 35px;
         text-align: right;
+
+        .intro__img_item {
+            transition: 1s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }   
+
         &:hover {
             transition: 1s;
             outline: $eclipse3;
         }
     }
     
+}
+
+@media (max-width: 1000px) {
+
+    .intro {
+
+        &_img {
+            display: none;
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -285,40 +312,51 @@ $eclipse3: #023957 ;
 .ourcompany__description {
     padding-left: 130px;
     text-align: left;
+
+    .section__title {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: 24px;
+        color: #056088;
+        padding-bottom: 16px ;
+    }
+
+    .section__description {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 16px;
+        padding-bottom: 16px ;
+        line-height: 29px;
+    }
+
+    .statistic__title {
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 16px;
+        padding-bottom: 16px
+    }
+
+    .statistic__company {
+        display: inline-grid;
+        grid-template-columns: repeat(3, 130px) ;
+        column-gap: 20px;
+        font-weight: 700;
+        color: #056088;
+        font-size: 20px;
+        padding-bottom: 25px;
+    }
+
+    
 }
 
-.section__title {
-    font-family: 'Poppins';
-    font-weight: 700;
-    font-size: 24px;
-    color: #056088;
-    padding-bottom: 16px ;
+@media (max-width: 700px) {
+
+    .ourcompany__description {
+        padding: 0 20px;
+        text-align: center;
+    }
 }
 
-.section__description {
-    font-family: 'Poppins';
-    font-weight: 400;
-    font-size: 16px;
-    padding-bottom: 16px ;
-    line-height: 29px;
-}
-
-.statistic__title {
-    font-family: 'Poppins';
-    font-weight: 500;
-    font-size: 16px;
-    padding-bottom: 16px
-}
-
-.statistic__company {
-    display: inline-grid;
-    grid-template-columns: repeat(3, 130px) ;
-    column-gap: 20px;
-    font-weight: 700;
-    color: #056088;
-    font-size: 20px;
-    padding-bottom: 25px;
-}
 
 /* Services block
 =========================================*/
@@ -436,7 +474,7 @@ $eclipse3: #023957 ;
 }
 
 .works__gallery {
-    margin-bottom: 60px;
+    margin: 60px 0;
 }
 
 .works__gallery_items {
@@ -472,6 +510,11 @@ $eclipse3: #023957 ;
     
 }
 
+.button__page--works {
+    margin-bottom: 82px;
+}
+
+
 @media (max-width:1300px) {
     
     .works__gallery_items {
@@ -484,11 +527,24 @@ $eclipse3: #023957 ;
 
 }
 
+@media (max-width: 700px) {
 
+    .works__bg {
+        background: none;
 
-.button__page--works {
-    margin-bottom: 82px;
+        .works__block {
+
+            .section__title {
+                color: black;
+            }
+             
+            .section__description {
+                color: black;
+            }
+        }
+    }
 }
+
 
 
 /* Clients Block
@@ -564,6 +620,7 @@ $eclipse3: #023957 ;
     .row__name_inner {
         display: flex;
         justify-content: space-around;
+        margin-bottom: 60px;
 
         .co__name {
             font-family: 'Roboto';
@@ -825,7 +882,7 @@ $eclipse3: #023957 ;
     display: flex;
     //flex-wrap: wrap;
     width: 100%;
-    animation-duration: 6s;
+    animation-duration: 2s;
     animation-name: slidein;
 
     @keyframes slidein {
@@ -838,7 +895,7 @@ $eclipse3: #023957 ;
           margin-left: 0%;
           width: 100%;
         }
-      }
+    }
 
     .l__block {
         position: relative;
@@ -878,6 +935,7 @@ $eclipse3: #023957 ;
         width: 100%;
         padding: 40px 0 ;
         text-align: left;
+        
         
         .down__block_description {
             width: 50%;
@@ -1035,7 +1093,7 @@ $eclipse3: #023957 ;
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
     
     .intro__inner--contact {
          padding: 150px 15px;
@@ -1048,15 +1106,8 @@ $eclipse3: #023957 ;
 
     }
 
-    
-
     .contact__top {
         display: block;
-
-        .contact__top_img {
-            display: none;
-                
-        }
 
         .contact__form {
 
@@ -1084,7 +1135,30 @@ $eclipse3: #023957 ;
     }
 }
 
+@media (max-width: 700px) {
 
+    .contact__top {
+
+        .contact__top_img {
+            display: none;   
+        }
+         
+        .contact__form {
+
+            .input__company {
+                width: 100%;
+            }
+
+            .input__email {
+                 width: 100%;
+            }
+
+            .textarea__form {
+                width: 100%;
+            }
+        }
+    }
+}
 
 /* Gallery Page
 =========================================*/ 
