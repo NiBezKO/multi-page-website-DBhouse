@@ -6,8 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&family=Roboto:wght@700&display=swap" 
     rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="css/chief-slider.css">-->
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/chief-slider.css">
+    <!--<link rel="stylesheet" href="css/swiper.min.css">-->
     <link rel="stylesheet" href="css/style.css">
     <title>Our Story </title>
 </head>
@@ -76,11 +76,13 @@
 <main>
     <section>
             <div class="wrapper">
+                
                 <div class="reviews__slider">
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
+                    
+                    <!--<div class="swiper">
+                        
                         <div class="swiper-wrapper">
-                          <!-- Slides -->
+                          
                             <div class="swiper-slide">
                                 <div class="slider__item_inner">
                                     <img src="img/clientPhoto1.png" alt="">
@@ -193,22 +195,22 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- If we need pagination -->
+                      
                         <div class="swiper-pagination"></div>
                       
-                        <!-- If we need navigation buttons -->
+                       
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                       
-                        <!-- If we need scrollbar -->
+                      
                         <div class="swiper-scrollbar"></div>
-                      </div>
+                      </div>-->
 
 
-                    <!--<div class="slider" id="slider">
+                    <div class="slider" id="slider">
                         <div class="slider__wrapper">
                             <div class="slider__items">
-                                <div class="slider__item" id="sliderItem">
+                                <div data-tab="1" class="slider__item active" id="sliderItem">
                                     <div class="slider__item_inner">
                                         <img src="img/clientPhoto1.png" alt="">
                                         <p class="slider__text">
@@ -220,7 +222,7 @@
                                         <p class="client__name">- Mr. James</p>
                                     </div>
                                 </div>
-                                <div class="slider__item">
+                                <div data-tab="2" class="slider__item">
                                     <div class="slider__item_inner">
                                         <img src="img/clientPhoto2.png" alt="">
                                         <p class="slider__text">
@@ -234,7 +236,7 @@
                                     </div>
                                 </div>
                                 <div class="slider__item">
-                                    <div class="slider__item_inner">
+                                    <div data-tab="3" class="slider__item_inner">
                                         <img src="img/clientPhoto3.png" alt="">
                                         <p class="slider__text">
                                             I really happy to see the result my new home. 
@@ -246,7 +248,7 @@
                                     </div>
                                 </div>
                                 <div class="slider__item">
-                                    <div class="slider__item_inner">
+                                    <div data-tab="4" class="slider__item_inner">
                                         <img src="img/clientPhoto1.png" alt="">
                                         <p class="slider__text">
                                             I really happy to see the result my new home. 
@@ -258,7 +260,7 @@
                                     </div>
                                 </div>
                                 <div class="slider__item">
-                                    <div class="slider__item_inner">
+                                    <div data-tab="5" class="slider__item_inner">
                                         <img src="img/clientPhoto2.png" alt="">
                                         <p class="slider__text">
                                             I really happy to see the result my new home. 
@@ -271,7 +273,7 @@
                                     </div>
                                 </div>
                                 <div class="slider__item">
-                                    <div class="slider__item_inner">
+                                    <div data-tab="6" class="slider__item_inner">
                                         <img src="img/clientPhoto3.png" alt="">
                                         <p class="slider__text">
                                             I really happy to see the result my new home. 
@@ -280,38 +282,13 @@
                                             Once again, thankyou. I really appreciate it.
                                         </p>
                                         <p class="client__name">- Mr. Marco</p>
-                                    </div>
-                                </div>
-                                <div class="slider__item">
-                                    <div class="slider__item_inner">
-                                        <img src="img/clientPhoto3.png" alt="">
-                                        <p class="slider__text">
-                                            I really happy to see the result my new home. 
-                                            It’s really good house and good price too. And they work so 
-                                            fast becasue they have the best team. 
-                                            Once again, thankyou. I really appreciate it.
-                                        </p>
-                                        <p class="client__name">- Mr. Marco</p>
-                                    </div>
-                                </div>
-                                <div class="slider__item">
-                                    <div class="slider__item_inner">
-                                        <img src="img/clientPhoto2.png" alt="">
-                                        <p class="slider__text">
-                                            I really happy to see the result my new home. 
-                                            It’s really good house and good price too. 
-                                            And they work so fast becasue they have the best team. 
-                                            Once again, thankyou. 
-                                            I really appreciate it.
-                                        </p>
-                                        <p class="client__name">- Mr. Ahmed</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <a href="#" class="slider__control" data-slide="prev"></a>
                         <a href="#" class="slider__control" data-slide="next"></a>
-                    </div>-->
+                    </div>
 
 
                 </div>
@@ -322,16 +299,30 @@
             
         </div>
     </section>
+    <!--Tabs-->
     <section>
         <div class="wrapper">
+            <div class="tabs">
+                <div class="tabs__top">
+                    <div class="tabs__photo">
+                        <img src="img/tabsClientPhoto.png" alt="">
+                    </div>
+                    <div class="tabs__comment">
+                        <p class="client__name">Mr. James’s says : “I’m so happy!”</p>
+                        <p class="tabs__comment_inner">
+                            is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+                            but also the leap into electronic typesetting, 
+                            remaining essentially unchanged.
+                        </p>
+                    </div>
+                </div>
+                <h2 class="section__title section__title--story">Mr. James’s villa</h2>
             <div class="process__gallery">
-                <h3 class="process__gallery_name">Gallery</h3>
+                
                 <div class="gallery__slider">
 
-                   
-
-
-                    <!--<div class="slider" id="slider">
+                    <div class="slider" id="slider">
                         <div class="slider__wrapper">
                             <div class="slider__items">
                                 <div class="slider__item">
@@ -362,10 +353,68 @@
                         </div>
                         <a href="#" class="slider__control" data-slide="prev"></a>
                         <a href="#" class="slider__control" data-slide="next"></a>
-                    </div>-->
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="wrapper">
+        <div class="tabs">
+            <div class="tabs__top">
+                <div class="tabs__photo">
+                    <img src="img/tabsClientPhoto.png" alt="">
+                </div>
+                <div class="tabs__comment">
+                    <p class="client__name">Mr. James’s says : “I’m so happy!”</p>
+                    <p class="tabs__comment_inner">
+                        is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+                        but also the leap into electronic typesetting, 
+                        remaining essentially unchanged.
+                    </p>
+                </div>
+            </div>
+            <h2 class="section__title section__title--story">Mr. James’s villa</h2>
+        <div class="process__gallery">
+            
+            <div class="gallery__slider">
+
+                <div class="slider" id="slider">
+                    <div class="slider__wrapper">
+                        <div class="slider__items">
+                            <div class="slider__item">
+                                <img src="img/sliderProcessIMG1.jpg" alt="">
+                            </div>
+                            <div class="slider__item">
+                                <img src="img/sliderProcessIMG1.jpg" alt="">
+                            </div>
+                            <div class="slider__item">
+                                <img src="img/sliderProcessIMG1.jpg" alt="">
+                            </div>
+                            <div class="slider__item">
+                                <img src="img/sliderProcessIMG1.jpg" alt="">
+                            </div>
+                            <div class="slider__item">
+                                <img src="img/sliderProcessIMG1.jpg" alt="">
+                            </div>
+                            <div class="slider__item">
+                                <img src="img/sliderProcessIMG1.jpg" alt="">
+                            </div>
+                            <div class="slider__item">
+                                <img src="img/sliderProcessIMG1.jpg" alt="">
+                            </div>
+                            <div class="slider__item">
+                                <img src="img/sliderProcessIMG1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="slider__control" data-slide="prev"></a>
+                    <a href="#" class="slider__control" data-slide="next"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     </section>
 </main>
 <!--Footer-->
@@ -426,7 +475,7 @@
 </footer><!--/Footer-->
 
 <script src="js/script.js"></script>
-<script src="js/core.js"></script>
-<!--<script defer src="js/chief-slider.js"></script>-->
+<!--<script src="js/core.js"></script>-->
+<script defer src="js/chief-slider.js"></script>
 </body>
 </html>

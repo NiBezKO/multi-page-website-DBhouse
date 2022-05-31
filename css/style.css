@@ -1174,6 +1174,10 @@
   padding: 0 78px 29px 150px;
 }
 
+.gallery .open__list {
+  margin-top: 30px;
+}
+
 /* Career Page
 ==============================================*/
 .career .carrer__list {
@@ -1472,58 +1476,67 @@
 ============================================*/
 .reviews__slider {
   margin: 100px 0;
-  /*.slider {
+  /*.swiper {
         max-width: 1236px;
+        height: 3373px;
 
-        .slider__wrapper {
-            overflow: hidden;
+        &-slide {
 
-            .slider__items {
-            
-                .slider__item {
-                    flex: 0 0 33.3333333333%;
-                    max-width: 416px;
-                    height: 373px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: rgba(255,255,255, 0.8);
+            .slider__item_inner {
+                color: black;
+                text-align: left;
+                font-size: 16px;
+                font-weight: 400;
+                font-style: italic;
+                padding: 12px 12px 12px 12px;
+                cursor: pointer;
+                font-family: 'Poppins';
+ 
+                &:hover {
+                    color: $white;
+                    background: url("../img/sliderClientBG.png");
+                    transform: all 2s ease;
+                }
 
-                    &_inner {
-                        color: black;
-                        text-align: left;
-                        font-size: 16px;
-                        font-weight: 400;
-                        font-style: italic;
-                        padding: 12px 12px 12px 12px;
-                        cursor: pointer;
-                        font-family: 'Poppins';
 
-                        &:hover {
-                            color: $white;
-                            background: url("../img/sliderClientBG.png");
-                            transform: all 2s ease;
-                        }
-
-                        .slider__text {
-                            margin: 32px 0 16px 0;
-                            font-size: 16px;
-                            font-weight: 400;
-                            font-style: italic;
-                        }
-                    }
+                .slider__text {
+                    margin: 32px 0 16px 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-style: italic;
                 }
             }
-        }  
-    } */
+        }
+      } */
 }
 
-.reviews__slider .swiper {
+.reviews__slider .slider {
   max-width: 1236px;
-  height: 3373px;
 }
 
-.reviews__slider .swiper-slide .slider__item_inner {
+.reviews__slider .slider .slider__wrapper {
+  overflow: hidden;
+}
+
+.reviews__slider .slider .slider__wrapper .slider__items .slider__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.3333333333%;
+          flex: 0 0 33.3333333333%;
+  max-width: 416px;
+  height: 373px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.reviews__slider .slider .slider__wrapper .slider__items .slider__item_inner {
   color: black;
   text-align: left;
   font-size: 16px;
@@ -1534,17 +1547,47 @@
   font-family: 'Poppins';
 }
 
-.reviews__slider .swiper-slide .slider__item_inner:hover {
+.reviews__slider .slider .slider__wrapper .slider__items .slider__item_inner:hover {
   color: white;
   background: url("../img/sliderClientBG.png");
   -webkit-transform: all 2s ease;
           transform: all 2s ease;
 }
 
-.reviews__slider .swiper-slide .slider__item_inner .slider__text {
+.reviews__slider .slider .slider__wrapper .slider__items .slider__item_inner .slider__text {
   margin: 32px 0 16px 0;
   font-size: 16px;
   font-weight: 400;
   font-style: italic;
+}
+
+.tabs__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 428px;
+  background: url("../img/servicesDownBG.png") no-repeat;
+  background-size: cover;
+}
+
+.tabs__top .tabs__photo {
+  padding: 64px 64px;
+}
+
+.tabs__top .tabs__comment {
+  padding: 120px 80px;
+  color: white;
+  text-align: left;
+}
+
+.tabs__top .tabs__comment .client__name {
+  padding-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.tabs .section__title--story {
+  color: #056088;
+  margin: 100px 0 32px 0;
 }
 /*# sourceMappingURL=style.css.map */

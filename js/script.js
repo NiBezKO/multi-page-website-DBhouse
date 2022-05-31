@@ -176,7 +176,7 @@ document.addEventListener ('DOMContentLoaded', function () {
 
 
 
-/*function corousel () {
+function corousel () {
     const corousel = document.getElementById ("slider")
     if (!corousel) {
         document.addEventListener.remove
@@ -191,7 +191,7 @@ document.addEventListener ('DOMContentLoaded', function () {
     
 }
 
-corousel (); */
+corousel (); 
 
 
 

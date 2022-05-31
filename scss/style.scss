@@ -1235,6 +1235,13 @@ $eclipse3: #023957 ;
     }
 }
 
+.gallery {
+
+    .open__list {
+        margin-top: 30px;
+    }
+}
+
 /* Career Page
 ==============================================*/ 
 
@@ -1534,7 +1541,7 @@ $eclipse3: #023957 ;
     margin: 100px 0;
 
 
-    .swiper {
+    /*.swiper {
         max-width: 1236px;
         height: 3373px;
 
@@ -1565,9 +1572,9 @@ $eclipse3: #023957 ;
                 }
             }
         }
-      }
+      } */
 
-    /*.slider {
+    .slider {
         max-width: 1236px;
 
         .slider__wrapper {
@@ -1610,5 +1617,37 @@ $eclipse3: #023957 ;
                 }
             }
         }  
-    } */
+    } 
+}
+
+.tabs {
+    
+
+    &__top {
+        display: flex;
+        height: 428px;
+        background: url("../img/servicesDownBG.png") no-repeat;
+        background-size: cover ;
+
+        .tabs__photo {
+            padding: 64px 64px;
+        }
+        
+        .tabs__comment {
+            padding: 120px 80px;
+            color: $white;
+            text-align: left;
+
+            .client__name {
+                padding-bottom: 20px;
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+    }
+
+   .section__title--story {
+       color: $eclipse2;
+       margin: 100px 0 32px 0;
+   }
 }
