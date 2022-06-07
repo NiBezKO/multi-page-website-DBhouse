@@ -8,7 +8,7 @@ window.addEventListener("scroll", function() {
     } else {
         header.classList.remove('eclipse');
     }
-    console.log(scrollPos);
+    
 });
 
 /* burger menu */
@@ -25,6 +25,41 @@ function burger () {
 }
 
 burger();
+
+/* changing intro img */
+/*
+
+poster.style.backgroundImage = 'url("img/introBG3.jpg")';*/
+
+(function() {
+    let poster = document.querySelector(".intro");
+    let i = 0;
+    let src = [
+        'img/intro-img.jpg',
+        'img/introBG2.jpg',
+        'img/introBG3.jpg',
+    ];
+    let l = src.length;
+    let t;
+    
+    for(i = 0; i < l; i++) {
+        let img = new Image();
+        img.src = src[i];
+        img.onload = function() {
+            delete this;
+        }
+    }
+    
+    i = 0;
+    t = setInterval(function() {
+        if(i === l){
+            i = 0;
+        }
+        poster.style.background = 'url(' + src[i] + ') center  no-repeat';
+        poster.style.backgroundSize = 'cover';
+        i++;
+    }, 3000);
+})();
 
 /* show list career */
 
@@ -114,12 +149,12 @@ showNews ();
 
 document.addEventListener ('DOMContentLoaded', function () {
     let animBlock = document.querySelectorAll (".animated__block");
-    let headerheight = document.querySelector (".header");
+    let headerHeight = document.querySelector (".header");
     
     //console.log(animBlock);
     if ( animBlock) {
         function animScroll () {
-        let windowCenter = (window.innerHeight  + window.scrollY) - headerheight.offsetHeight;
+        let windowCenter = (window.innerHeight  + window.scrollY) - headerHeight.offsetHeight;
         let siteHeight = window.outerHeight;
 
         for ( let i = 0; i < animBlock.length; i++ ) {
@@ -149,33 +184,6 @@ document.addEventListener ('DOMContentLoaded', function () {
 
 
 
- 
-/* corousel */
-
-/*const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  }); */
-
-
-
 function corousel () {
     const corousel = document.getElementById ("slider")
     if (!corousel) {
@@ -194,38 +202,93 @@ function corousel () {
 corousel (); 
 
 
+/*const tabsNavs   = document.querySelectorAll(".comments__item");
+const tabsItems = document.querySelectorAll(".tab");
 
+tabsNavs.forEach(onTabClick);
 
-//let openButton = document.querySelector (".open__list")
-//let careerShow = document.querySelector(".career")
+function onTabClick(item) {
+    item.addEventListener("click", function() {
+        let currentBtn = item;
+        let tabId = currentBtn.getAttribute("data-tab");
+        let currentTab = document.querySelector(tabId);
 
-
-/*let listInner = document.querySelectorAll(".list__inner");
-let buttonShow = document.querySelector(".open__list");
-
-for ( let i = 9 ; i < listInner.length; i++) {
-listInner[i].style.display = "none";
+        if( ! currentBtn.classList.contains('_active') ) {
+            tabsNavs.forEach(function(item) {
+                item.classList.remove('_active');
+            });
+    
+            tabsItems.forEach(function(item) {
+                item.classList.remove('_active');
+            });
+    
+            currentBtn.classList.add('_active');
+            currentTab.classList.add('_active');
+        }
+    });
 }
 
-    let countInner = 9;
-    for ( buttonShow = 0; buttonShow > 0 ; buttonShow ++) {
-        buttonShow.addEventListener("click", function () {
-            let listInner = document.querySelectorAll('list__inner');
-            countInner += 9;
-            if ( countInner <= listInner.length) {
-                for (let i = 0; i < countInner; i++) {
-                    listInner[i].style.display = "block";
-                }
-            }
-    })
-    
-};
-/*
+document.querySelector('.comments__item').click(); */
 
-/*openButton.addEventListener("click", function() {
-    openButton.classList.toggle ("_active");
-    careerShow.classList.toggle("_active");
-}); */
+
+
+//window.addEventListener( 'DOMContentLoaded', function() {
+
+/*let tabNavs = document.querySelectorAll(".comments__item");
+let tabPanes = document.querySelectorAll(".tab");
+
+for (let i = 0; i < tabNavs.length; i++) {
+
+  tabNavs[i].addEventListener("click", function(e){
+    e.preventDefault();
+    let activeTabAttr = e.target.getAttribute("data-tab");
+
+    for (let j = 0; j < tabNavs.length; j++) {
+        let contentAttr = tabPanes[j].getAttribute("data-tab-content");
+       
+      if (activeTabAttr === contentAttr) {
+        tabNavs[j].classList.add("slider__item--active");
+        tabPanes[j].classList.add("tab__active"); 
+      } else {
+        tabNavs[j].classList.remove("slider__item--active");
+        tabPanes[j].classList.remove("tab__active");
+      }
+      
+    };
+
+  });
+
+} */
+
+//})
+
+/*var tabNavs = document.querySelectorAll(".nav-tab");
+var tabPanes = document.querySelectorAll(".tab-pane");
+
+for (var i = 0; i < tabNavs.length; i++) {
+
+  tabNavs[i].addEventListener("click", function(e){
+    e.preventDefault();
+    var activeTabAttr = e.target.getAttribute("data-tab");
+
+    for (var j = 0; j < tabNavs.length; j++) {
+      var contentAttr = tabPanes[j].getAttribute("data-tab-content");
+
+      if (activeTabAttr === contentAttr) {
+        tabNavs[j].classList.add("active");
+        tabPanes[j].classList.add("active"); 
+      } else {
+        tabNavs[j].classList.remove("active");
+        tabPanes[j].classList.remove("active");
+      }
+    };
+  });
+}*/
+
+
+
+
+
 
    
     
