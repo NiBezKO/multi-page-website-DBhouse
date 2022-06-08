@@ -61,6 +61,7 @@ $eclipse3: #023957 ;
 
 @media (max-width: 1300px) {
     .header__inner {
+        padding-right: 20px;
 
         .nav  {
             visibility: hidden;
@@ -101,7 +102,7 @@ $eclipse3: #023957 ;
             width: 30px;
             height: 18px;
             z-index: 5;
-            margin: 30px 15px 0 0;
+            margin-top: 30px;
 
             
         }
@@ -145,6 +146,13 @@ $eclipse3: #023957 ;
 @media (max-width: 700px) {
     .header {
         background-color: $eclipse2;
+
+        &__inner {
+
+            .site__logo {
+                padding-left: 20px;
+            }
+        }
     }
 }
 
@@ -157,6 +165,7 @@ $eclipse3: #023957 ;
     background-color: $eclipse2;
     background-size: cover;
     color: white;
+    object-fit: cover;
     
 
     &__inner {
@@ -176,6 +185,24 @@ $eclipse3: #023957 ;
         font-weight: 500;
         font-size: 16px;
         padding-bottom: 50px;
+    }
+
+    .open__modal {
+        display: inline-block;
+        padding: 25px 0 ;
+        width: 180px;
+        height: 80px;
+        background-color: $eclipse1;
+        text-align: center;
+        color: white;
+        vertical-align: top;
+        cursor: pointer;
+        transition: all 2s;
+        font-size: 20px;
+        border: none;
+        &:hover {
+            background-color: $eclipse3;
+        }
     }
 
     &__img {
@@ -202,6 +229,11 @@ $eclipse3: #023957 ;
 
     .intro {
 
+        &__inner {
+            text-align: left;
+            padding: 150px 15px;
+        }
+
         &_img {
             display: none;
         }
@@ -215,8 +247,8 @@ $eclipse3: #023957 ;
         &__inner {
             padding: 150px 15px;
             
-            &__title {
-                font-size: 20px;
+            .intro__title {
+                font-size: 35px;
             }
     
         }
@@ -449,15 +481,33 @@ $eclipse3: #023957 ;
 }
 
 @media (max-width: 700px) {
+
     .carts {
     display: grid;  
-    grid-template-columns: repeat(auto-fill, minmax(32%, 375px) );
+    grid-template-columns: repeat(auto-fill, minmax(375px, 375px) );
 
-        &__item {
-            //width: calc(1300px / 3.5);
-            width: 375px;
+    &__item {
+        //width: calc(1300px / 3.5);
+        width: 375px;
+        
+        .carts__bg {
+            display: none;
+        }
+
+        .carts__content-inner {
+            background-color: $eclipse2 ;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .carts__item-description {
+            padding-bottom: 20px;
         }
     }
+
+}
+
 } 
 
 /* Our Works Block
@@ -494,14 +544,12 @@ $eclipse3: #023957 ;
     .left__block {
         display:  grid;
         grid-template-areas: "left";
-        
     }
     
     .central__block {
         display:  grid;
         grid-template-areas: "central";
         grid-gap: 20px;
-        
         justify-content: stretch;
         grid-template-rows: 277px 163px;
         grid-template-columns: repeat(420px);
@@ -517,6 +565,7 @@ $eclipse3: #023957 ;
     
 }
 
+
 .button__page--works {
     margin-bottom: 82px;
 }
@@ -525,6 +574,7 @@ $eclipse3: #023957 ;
 @media (max-width:1300px) {
     
     .works__gallery_items {
+        
         grid-template-columns: repeat(auto-fit, minmax(420px, 420px));
     }
     
@@ -540,10 +590,48 @@ $eclipse3: #023957 ;
         background: none;
 
         .works__block {
+            
+            .works__gallery {
+              
+                .works__gallery_items {
+                    grid-template-columns: repeat(auto-fit, minmax(375px,375px));
+                    
+                    .left__block {
+                  
+                        &_items {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+    
+                    .central__block {
+    
+                        &_items {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+
+                    .right__block {
+                        grid: repeat(3, 175px) / repeat( 2, 175px) ;
+
+                        &_items {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+               
+
+            } 
 
             .section__title {
                 color: black;
-            }
+            } 
              
             .section__description {
                 color: black;
@@ -869,6 +957,58 @@ $eclipse3: #023957 ;
     
 }
 
+/* Modal 
+============================*/ 
+
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(90, 90, 90, 0.7);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    &__dialog {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+
+        .modal__content {
+            background-color: $white;
+            color: $eclipse3;
+            max-width: 500px;
+            padding: 30px;
+            font-family: 'Poppins';
+            position: fixed;
+
+            &_close {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                font-size: 25px;
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+                transition: 1s;
+
+                &:hover {
+                    transform: scale(1.2); 
+                }
+            }
+
+            &_title {
+                color: $eclipse2;
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
 
 /* Page About
 ============================  */
@@ -1173,7 +1313,7 @@ $eclipse3: #023957 ;
 .gallery {
     margin: 100px 0;
 
-    .gallery__inner {
+    &__inner {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
         list-style-type: none;
@@ -1181,7 +1321,7 @@ $eclipse3: #023957 ;
         row-gap: 50px;
         padding: 0;
         justify-content: center;
-    
+
         &_item {
             display: grid;
             grid-auto-flow: row;
@@ -1210,6 +1350,22 @@ $eclipse3: #023957 ;
 
         &:hover {
             transform: scale(1.2);
+        }
+    }
+}
+
+@media (max-width: 700px) {
+   
+    .gallery__inner {
+        grid-template-columns: repeat(auto-fit, minmax(375px, 375px));
+
+        &_item {
+
+            .gallery__photo_img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 }

@@ -61,6 +61,33 @@ poster.style.backgroundImage = 'url("img/introBG3.jpg")';*/
     }, 3000);
 })();
 
+/* modal */
+
+document.addEventListener ('DOMContentLoaded', function () { 
+let modalWindow = document.querySelector ('.modal');
+let btnOpenModal = document.querySelector ('.open__modal');
+let closeModal = document.querySelector ('.modal__content_close'); 
+
+if (modalWindow, btnOpenModal, closeModal ) {
+
+    btnOpenModal.addEventListener('click', function() {
+        console.log(btnOpenModal);
+            modalWindow.style.visibility = 'visible';
+            modalWindow.style.opacity= '1.0';
+            document.body.style.overflow = 'hidden';
+            
+        })
+        
+        closeModal.addEventListener('click', function () {
+            modalWindow.style.visibility = 'hidden';
+            modalWindow.style.opacity= '0';
+            document.body.style.overflow = '';
+        })
+}
+
+})
+
+
 /* show list career */
 
 function showListProcess () {
@@ -161,7 +188,7 @@ document.addEventListener ('DOMContentLoaded', function () {
            let animItem = animBlock[i];
            //console.log(animBlock[i]);
            
-           let scrollOffSet = animItem.offsetTop + (animItem.offsetHeight /2);
+           let scrollOffSet = animItem.offsetTop /*+ (animItem.offsetHeight / 2)*/;
            if (  windowCenter > scrollOffSet) {
             animItem.classList.add ("_active");
            } else {
