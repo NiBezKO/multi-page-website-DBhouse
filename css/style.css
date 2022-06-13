@@ -1433,7 +1433,7 @@
   font-weight: 700;
 }
 
-.process__top .process__inner .rocess__description {
+.process__top .process__inner .process__description {
   font-family: 'Poppins';
   font-weight: 400;
   font-size: 16px;
@@ -1459,6 +1459,30 @@
 
 .process__top .process__img {
   width: 50%;
+}
+
+@media (max-width: 1300px) {
+  .process__top {
+    display: block;
+    text-align: center;
+  }
+  .process__top .process__inner {
+    width: 100%;
+    text-align: center;
+  }
+  .process__top .process__inner .inner__item_price {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .process__top .process__inner .inner__item_price {
+    -ms-grid-columns: (minmax(172px, 172px))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(172px, 172px));
+  }
 }
 
 .process__central {
@@ -1510,8 +1534,26 @@
   font-size: 7rem;
 }
 
-/* Our Story Page 
-=================================================*/
+@media (max-width: 1300px) {
+  .slider__item {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    max-width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 7rem;
+  }
+}
+
 /* Services Page
 =====================================================*/
 .services__inner--page {
@@ -1617,61 +1659,6 @@
 
 /* Story page 
 ============================================*/
-.reviews__slider {
-  margin: 100px 0;
-}
-
-.reviews__slider .slider {
-  max-width: 1236px;
-}
-
-.reviews__slider .slider .slider__wrapper {
-  overflow: hidden;
-}
-
-.reviews__slider .slider .slider__wrapper .slider__items .slider__item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 33.3333333333%;
-          flex: 0 0 33.3333333333%;
-  max-width: 416px;
-  height: 373px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.reviews__slider .slider .slider__wrapper .slider__items .slider__item_inner {
-  color: black;
-  text-align: left;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: italic;
-  padding: 12px 12px 12px 12px;
-  cursor: pointer;
-  font-family: 'Poppins';
-}
-
-.reviews__slider .slider .slider__wrapper .slider__items .slider__item_inner:hover {
-  color: white;
-  background: url("../img/sliderClientBG.png");
-  -webkit-transform: all 2s ease;
-          transform: all 2s ease;
-}
-
-.reviews__slider .slider .slider__wrapper .slider__items .slider__item_inner .slider__text {
-  margin: 32px 0 16px 0;
-  font-size: 16px;
-  font-weight: 400;
-  font-style: italic;
-}
-
 .wrapper__commets {
   margin: 100px 0;
 }
@@ -1680,12 +1667,20 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style-type: none;
   margin-left: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.wrapper__commets .comments .comments__item {
-  width: 416px;
+.wrapper__commets .comments__list {
+  width: 33%;
+}
+
+.wrapper__commets .comments__list .comments__item {
   height: 373px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1695,7 +1690,7 @@
           align-items: center;
 }
 
-.wrapper__commets .comments .comments__item .comments__item_inner {
+.wrapper__commets .comments__list .comments__item_inner {
   color: black;
   text-align: left;
   font-size: 16px;
@@ -1706,7 +1701,7 @@
   font-family: 'Poppins';
 }
 
-.wrapper__commets .comments .comments__item .comments__item_inner:hover {
+.wrapper__commets .comments__list .comments__item_inner:hover {
   color: white;
   background: url("../img/sliderClientBG.png");
   -webkit-transform: all 2s ease;
@@ -1721,7 +1716,7 @@
   display: block;
 }
 
-.tab._active ._active__top {
+.tab._active .tab__top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1730,17 +1725,17 @@
   background-size: cover;
 }
 
-.tab._active ._active__top .tab__active__photo {
+.tab._active .tab__top .tab__photo {
   padding: 64px 64px;
 }
 
-.tab._active ._active__top .tab__active__comment {
+.tab._active .tab__top .tab__comment {
   padding: 120px 80px;
   color: white;
   text-align: left;
 }
 
-.tab._active ._active__top .tab__active__comment .client__name {
+.tab._active .tab__top .tab__comment .client__name {
   padding-bottom: 20px;
   font-size: 24px;
   font-weight: 700;
@@ -1749,5 +1744,65 @@
 .tab._active .section__title--story {
   color: #056088;
   margin: 100px 0 32px 0;
+}
+
+.tab._active .process__gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(420px, auto))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(420px, auto));
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (max-width: 1300px) {
+  .tab._active .tab__top {
+    display: block;
+    color: black;
+    height: auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .comments {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .comments__item {
+    height: auto;
+  }
+  .comments__item_inner .comments__text {
+    display: none;
+  }
+  .tab._active .tab__top {
+    display: block;
+    color: black;
+    height: auto;
+  }
+  .tab._active .process__gallery {
+    margin: 100px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(375px, 375px))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(375px, 375px));
+    gap: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .tab._active .process__gallery .process__gallery_img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -71,7 +71,6 @@ let closeModal = document.querySelector ('.modal__content_close');
 if (modalWindow, btnOpenModal, closeModal ) {
 
     btnOpenModal.addEventListener('click', function() {
-        console.log(btnOpenModal);
             modalWindow.style.visibility = 'visible';
             modalWindow.style.opacity= '1.0';
             document.body.style.overflow = 'hidden';
@@ -228,89 +227,36 @@ function corousel () {
 
 corousel (); 
 
+/* tabs  */
 
-/*const tabsNavs   = document.querySelectorAll(".comments__item");
+const tabsNavs   = document.querySelectorAll(".comments__item");
 const tabsItems = document.querySelectorAll(".tab");
+console.log(tabsItems)
 
-tabsNavs.forEach(onTabClick);
-
-function onTabClick(item) {
-    item.addEventListener("click", function() {
+tabsNavs.forEach(function (item) {
+    item.addEventListener("click", function () {
         let currentBtn = item;
         let tabId = currentBtn.getAttribute("data-tab");
         let currentTab = document.querySelector(tabId);
 
-        if( ! currentBtn.classList.contains('_active') ) {
-            tabsNavs.forEach(function(item) {
-                item.classList.remove('_active');
-            });
+        if ( ! currentBtn.classList.contains("_active")) {
+          
+            tabsNavs.forEach(function (item) {
+                item.classList.remove("_active");
+            })
     
             tabsItems.forEach(function(item) {
-                item.classList.remove('_active');
-            });
-    
-            currentBtn.classList.add('_active');
-            currentTab.classList.add('_active');
+                item.classList.remove("_active");
+            })
+            
+            currentBtn.classList.add ("_active");
+            currentTab.classList.add ("_active");
         }
-    });
-}
 
-document.querySelector('.comments__item').click(); */
+        
+    })
+})
 
-
-
-//window.addEventListener( 'DOMContentLoaded', function() {
-
-/*let tabNavs = document.querySelectorAll(".comments__item");
-let tabPanes = document.querySelectorAll(".tab");
-
-for (let i = 0; i < tabNavs.length; i++) {
-
-  tabNavs[i].addEventListener("click", function(e){
-    e.preventDefault();
-    let activeTabAttr = e.target.getAttribute("data-tab");
-
-    for (let j = 0; j < tabNavs.length; j++) {
-        let contentAttr = tabPanes[j].getAttribute("data-tab-content");
-       
-      if (activeTabAttr === contentAttr) {
-        tabNavs[j].classList.add("slider__item--active");
-        tabPanes[j].classList.add("tab__active"); 
-      } else {
-        tabNavs[j].classList.remove("slider__item--active");
-        tabPanes[j].classList.remove("tab__active");
-      }
-      
-    };
-
-  });
-
-} */
-
-//})
-
-/*var tabNavs = document.querySelectorAll(".nav-tab");
-var tabPanes = document.querySelectorAll(".tab-pane");
-
-for (var i = 0; i < tabNavs.length; i++) {
-
-  tabNavs[i].addEventListener("click", function(e){
-    e.preventDefault();
-    var activeTabAttr = e.target.getAttribute("data-tab");
-
-    for (var j = 0; j < tabNavs.length; j++) {
-      var contentAttr = tabPanes[j].getAttribute("data-tab-content");
-
-      if (activeTabAttr === contentAttr) {
-        tabNavs[j].classList.add("active");
-        tabPanes[j].classList.add("active"); 
-      } else {
-        tabNavs[j].classList.remove("active");
-        tabPanes[j].classList.remove("active");
-      }
-    };
-  });
-}*/
 
 
 

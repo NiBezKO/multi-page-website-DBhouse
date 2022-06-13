@@ -1511,7 +1511,7 @@ $eclipse3: #023957 ;
             font-weight: 700;
         }
 
-        .rocess__description {
+        .process__description {
             font-family: 'Poppins';
             font-weight: 400;
             font-size: 16px;
@@ -1534,6 +1534,39 @@ $eclipse3: #023957 ;
     .process__img {
         width: 50%;
     }
+}
+
+@media (max-width: 1300px) {
+    .process__top {
+        display: block;
+        text-align: center;
+
+        .process__inner {
+            width: 100%;
+            text-align: center;
+
+            .inner__item_price {
+                justify-content: center;
+                margin: 20px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .process__top {
+      
+        .process__inner {
+
+            .inner__item_price {
+                grid-template-columns: repeat(auto-fill,minmax(172px, 172px));
+                //display: block;
+            }
+        }
+        
+    }
+    
+
 }
 
 .process__central {
@@ -1587,11 +1620,18 @@ $eclipse3: #023957 ;
     }  
 }
 
-/* Our Story Page 
-=================================================*/
+@media (max-width: 1300px) {
+    .slider__item {
+        flex: 50%;
+        max-width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(255,255,255, 0.8);
+        font-size: 7rem;
+    }
 
-
-
+}
 
 /* Services Page
 =====================================================*/ 
@@ -1700,91 +1740,48 @@ $eclipse3: #023957 ;
 /* Story page 
 ============================================*/ 
 
-.reviews__slider {
-    margin: 100px 0;
-
-    .slider {
-        max-width: 1236px;
-
-        .slider__wrapper {
-            overflow: hidden;
-
-            .slider__items {
-            
-                .slider__item {
-                    flex: 0 0 33.3333333333%;
-                    max-width: 416px;
-                    height: 373px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color: rgba(255,255,255, 0.8);
-
-                    &_inner {
-                        color: black;
-                        text-align: left;
-                        font-size: 16px;
-                        font-weight: 400;
-                        font-style: italic;
-                        padding: 12px 12px 12px 12px;
-                        cursor: pointer;
-                        font-family: 'Poppins';
-
-                        &:hover {
-                            color: $white;
-                            background: url("../img/sliderClientBG.png");
-                            transform: all 2s ease;
-                        }
-
-                        .slider__text {
-                            margin: 32px 0 16px 0;
-                            font-size: 16px;
-                            font-weight: 400;
-                            font-style: italic;
-                        }
-                    }
-                }
-            }
-        }  
-    } 
-}
-
 .wrapper__commets {
 margin: 100px 0;
 
+          
     .comments {
         display: flex;
+        flex-wrap: wrap;
         list-style-type: none;
         margin-left: 20px;
-     
-        .comments__item {
-            width: 416px;
-            height: 373px;
-            justify-content: center;
-            align-items: center;
-     
-            .comments__item_inner {
-                 color: black;
-                 text-align: left;
-                 font-size: 16px;
-                 font-weight: 400;
-                 font-style: italic;
-                 padding: 12px 12px 12px 12px;
-                 cursor: pointer;
-                 font-family: 'Poppins';
-     
-                 &:hover {
-                     color: $white;
-                     background: url("../img/sliderClientBG.png");
-                     transform: all 2s ease;
+        justify-content: center;
+        
+        &__list {
+            width: 33%;
+            
+            .comments__item {
+               
+                height: 373px;
+                justify-content: center;
+                align-items: center;
+         
+                &_inner {
+                     color: black;
+                     text-align: left;
+                     font-size: 16px;
+                     font-weight: 400;
+                     font-style: italic;
+                     padding: 12px 12px 12px 12px;
+                     cursor: pointer;
+                     font-family: 'Poppins';
+         
+                     &:hover {
+                         color: $white;
+                         background: url("../img/sliderClientBG.png");
+                         transform: all 2s ease;
+                    }
                 }
-            }
-        } 
+            } 
+        }
+        
+        
     }
 }
-
-
-
 
 
 .tab {
@@ -1793,18 +1790,19 @@ margin: 100px 0;
 
 .tab._active  {
     display: block;
-    
-    ._active__top {
+
+
+    .tab__top {
         display: flex;
         height: 428px;
         background: url("../img/servicesDownBG.png") no-repeat;
         background-size: cover ;
 
-        .tab__active__photo {
+        .tab__photo {
             padding: 64px 64px;
         }
         
-        .tab__active__comment {
+        .tab__comment {
             padding: 120px 80px;
             color: $white;
             text-align: left;
@@ -1815,11 +1813,81 @@ margin: 100px 0;
                 font-weight: 700;
             }
         }
+    
     }
 
    .section__title--story {
        color: $eclipse2;
        margin: 100px 0 32px 0;
    }
+
+   .process__gallery {
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(420px, auto));
+       gap: 20px;
+       justify-content: center;
+   }
+
 }
 
+@media (max-width: 1300px) {
+    .tab._active  {
+    
+        .tab__top {
+            display: block;
+            color: black;
+            //background: none;
+            height: auto;
+        }
+}
+}
+    
+
+@media (max-width:700px ) {
+
+    .comments {
+        display: flex;
+        
+        justify-content: center;
+        
+        margin: 0;
+        padding: 0;
+
+        &__item {
+            height: auto;
+
+            &_inner {
+
+                .comments__text {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .tab._active  {
+    
+        .tab__top {
+            display: block;
+            color: black;
+            height: auto;
+        }
+
+
+
+        .process__gallery {
+            margin: 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(375px, 375px));
+            gap: 20px;
+            justify-content: center;
+    
+            .process__gallery_img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+        }
+    }
+   
+}
