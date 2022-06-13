@@ -88,7 +88,8 @@ $eclipse3: #023957 ;
             display: flex;
             flex-direction: column;
             text-align: center;
-            
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
         }
     
         .nav__link {
@@ -178,6 +179,7 @@ $eclipse3: #023957 ;
         font-weight: 700;
         font-size: 52px;
         padding-bottom: 25px;
+        line-height: 78px;
     }
 
     &__subtitle {
@@ -225,16 +227,16 @@ $eclipse3: #023957 ;
     
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
 
     .intro {
 
-        &__inner {
+        .intro__inner {
             text-align: left;
             padding: 150px 15px;
         }
 
-        &_img {
+        .intro__img {
             display: none;
         }
     }
