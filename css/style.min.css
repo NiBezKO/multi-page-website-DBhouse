@@ -7,6 +7,12 @@
   z-index: 1000;
 }
 
+@media (max-width: 1300px) {
+  .header {
+    background-color: #056088;
+  }
+}
+
 .header__inner {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,10 +140,7 @@
 }
 
 @media (max-width: 700px) {
-  .header {
-    background-color: #056088;
-  }
-  .header__inner .site__logo {
+  __inner .site__logo {
     padding-left: 20px;
   }
 }
@@ -402,6 +405,7 @@
 .services-item:hover {
   background-image: url("../img/ItemBG.png");
   background-color: #023957;
+  color: white;
 }
 
 .services-item:hover .svg {
@@ -435,6 +439,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: -70px;
+  color: white;
 }
 
 .carts__item {
